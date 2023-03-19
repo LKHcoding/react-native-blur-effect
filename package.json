@@ -1,0 +1,91 @@
+{
+  "name": "react-native-blur-effect",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/BlurView/index.js",
+  "types": "dist/BlurView/index.d.ts",
+  "scripts": {
+    "postinstall": "patch-package",
+    "android": "react-native run-android --appIdSuffix=local",
+    "android-clean": "cd android && ./gradlew clean && cd ../",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "start-with-android-clean": "yarn android-clean && yarn start --reset-cache",
+    "pod-install": "cd ios && arch -x86_64 pod install && cd ../",
+    "lint": "eslint --ext .tsx --ext .ts src/",
+    "tsc-lint": "tsc --noEmit --pretty",
+    "tsc-build": "rm -rf dist && tsc --outDir ./dist",
+    "tsc-watch": "rm -rf dist && tsc -w --outDir ./dist",
+    "prepare": "rm -rf dist && tsc --outDir ./dist"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-native": ">=0.66.4",
+    "react-native-webview": ">=11.26.1",
+    "patch-package": ">=6.5.1",
+    "postinstall-postinstall": ">=2.1.0"
+  },
+  "devDependencies": {
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-native-webview": "^11.26.1",
+    "patch-package": "^6.5.1",
+    "postinstall-postinstall": "^2.1.0",
+
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/react-native": "^0.66.4",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.14.0",
+    "husky": "^8.0.3",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "description": "blur effect library for react-native",
+  "repository": "https://github.com/LKHcoding/react-native-blur-effect",
+  "author": "LKHcoding",
+  "keywords": [
+    "react-native-blur-effect",
+    "react-native-blur",
+    "react-native blur",
+    "react native blur",
+    "react native blur effect"
+  ],
+  "license": "MIT"
+}
