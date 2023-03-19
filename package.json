@@ -78,8 +78,18 @@
     ]
   },
   "description": "blur effect library for react-native",
-  "repository": "https://github.com/LKHcoding/react-native-blur-effect",
-  "author": "LKHcoding",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LKHcoding/react-native-blur-effect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LKHcoding/react-native-blur-effect/issues"
+  },
+  "homepage": "https://github.com/LKHcoding/react-native-blur-effect#readme",
+  "author": {
+    "name": "LKHcoding",
+    "email": "lkhcoding@gmail.com"
+  },
   "keywords": [
     "react-native-blur-effect",
     "react-native-blur",

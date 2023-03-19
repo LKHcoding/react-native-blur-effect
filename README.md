@@ -51,3 +51,5 @@ without any problems on both aos/ios platforms.
 
 Please share if there is a better alternative than using webview.
 
+## Reference
+https://gist.github.com/dutradotdev/50c82763fc621ab3c1bd5ba02180ce0d
