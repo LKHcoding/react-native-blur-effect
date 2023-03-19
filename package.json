@@ -1,11 +1,11 @@
 {
   "name": "react-native-blur-effect",
-  "version": "1.0.0",
+  "version": "1.0.10",
   "private": false,
   "main": "dist/BlurView/index.js",
   "types": "dist/BlurView/index.d.ts",
   "scripts": {
-    "postinstall": "patch-package",
+    "postinstall": "npx patch-package",
     "android": "react-native run-android --appIdSuffix=local",
     "android-clean": "cd android && ./gradlew clean && cd ../",
     "ios": "react-native run-ios",
@@ -34,11 +34,9 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": ">=17.0.2",
-    "react-native": ">=0.66.4",
-    "react-native-webview": ">=11.26.1",
-    "patch-package": ">=6.5.1",
-    "postinstall-postinstall": ">=2.1.0"
+    "react": "^17.0.2",
+    "react-native": "^0.66.4",
+    "react-native-webview": "^11.26.1"
   },
   "devDependencies": {
     "react": "17.0.2",
