@@ -5,7 +5,7 @@
 
 ## Install
 ```bash
-$ yarn add react-native-blur-effect
+$ yarn add react-native-webview react-native-blur-effect
 ```
 
 ## Usage
