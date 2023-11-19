@@ -27,11 +27,14 @@ const BlurExampleComponent = () => {
 
 ## Precautions
 'BlurView' is using webview.  
-When using 'WebView' within 'ScrollView', there is a problem of crashing if it reach to the end of the scroll.  
-[react-native-webview issue link](https://github.com/react-native-webview/react-native-webview/issues/2364)
 
-It is expected to be resolved in 'PR' below If you use 'patch-package', you can use it without crash.  
-[#2874](https://github.com/react-native-webview/react-native-webview/pull/2874)
+~~When using 'WebView' within 'ScrollView', there is a problem of crashing if it reach to the end of the scroll.  
+[react-native-webview issue link](https://github.com/react-native-webview/react-native-webview/issues/2364)~~  
+➡️ Fixed at react-native-webview ^13.6.2
+
+~~It is expected to be resolved in 'PR' below If you use 'patch-package', you can use it without crash.  
+[#2874](https://github.com/react-native-webview/react-native-webview/pull/2874)~~  
+➡️ Fixed at react-native-webview ^13.6.2
 
 ## About this library
 React Native currently does not provide a way to use the Blur effect.

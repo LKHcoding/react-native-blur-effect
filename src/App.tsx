@@ -79,7 +79,7 @@ const App = () => {
         <View>
           <Header />
 
-          <BlurView blurRadius={4} />
+          <BlurView blurRadius={1} />
         </View>
 
         <View
@@ -87,10 +87,13 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}
         >
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this screen and then
-            come back to see your edits.
-          </Section>
+          <View>
+            <Section title="Step One">
+              Edit <Text style={styles.highlight}>App.tsx</Text> to change this screen and then
+              come back to see your edits.
+            </Section>
+            <BlurView blurRadius={2} />
+          </View>
 
           <View style={{ paddingBottom: 20 }}>
             <Section title="See Your Changes">
@@ -98,22 +101,31 @@ const App = () => {
             </Section>
 
             <BlurView
-              blurRadius={5}
+              blurRadius={3}
               backgroundColor={'rgba(0, 0, 0, 0.1)'}
             />
 
-            <Text style={{ marginLeft: 22 }}>This text is above the blur view.</Text>
+            <Text style={{ marginLeft: 22, marginTop: 16, fontWeight: '700', fontSize: 20 }}>
+              This text is above the blur view.
+            </Text>
           </View>
 
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
+          <View>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+            <BlurView
+              blurRadius={4}
+              backgroundColor={'rgba(0, 0, 0, 0.2)'}
+            />
+          </View>
 
           <View>
             <Section title="Learn More">Read the docs to discover what to do next:</Section>
 
-            <BlurView blurRadius={2} />
             <LearnMoreLinks />
+
+            <BlurView blurRadius={5} />
           </View>
         </View>
       </ScrollView>

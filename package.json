@@ -5,14 +5,14 @@
   "main": "dist/BlurView/index.js",
   "types": "dist/BlurView/index.d.ts",
   "scripts": {
-    "postinstall": "npx patch-package",
     "android": "react-native run-android --appIdSuffix=local",
     "android-clean": "cd android && ./gradlew clean && cd ../",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "start-with-android-clean": "yarn android-clean && yarn start --reset-cache",
-    "pod-install": "cd ios && arch -x86_64 pod install && cd ../",
+    "pod-install": "cd ios && pod install && cd ../",
+    "pod-install-arch": "cd ios && arch -x86_64 pod install && cd ../",
     "lint": "eslint --ext .tsx --ext .ts src/",
     "tsc-lint": "tsc --noEmit --pretty",
     "tsc-build": "rm -rf dist && tsc --outDir ./dist",
@@ -36,7 +36,7 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-native": "^0.66.4",
-    "react-native-webview": "^11.26.1"
+    "react-native-webview": "^13.6.2"
   },
   "devDependencies": {
     "react": "17.0.2",
