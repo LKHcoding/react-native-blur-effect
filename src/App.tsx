@@ -73,7 +73,7 @@ const App = () => {
         backgroundColor={'white'}
       />
       <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
+        // contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}
       >
         <View>
