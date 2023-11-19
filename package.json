@@ -1,6 +1,6 @@
 {
   "name": "react-native-blur-effect",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "private": false,
   "main": "dist/BlurView/index.js",
   "types": "dist/BlurView/index.d.ts",
