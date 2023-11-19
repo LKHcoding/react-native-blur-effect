@@ -1,6 +1,6 @@
 {
   "name": "react-native-blur-effect",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "main": "dist/BlurView/index.js",
   "types": "dist/BlurView/index.d.ts",
@@ -17,7 +17,8 @@
     "tsc-lint": "tsc --noEmit --pretty",
     "tsc-build": "rm -rf dist && tsc --outDir ./dist",
     "tsc-watch": "rm -rf dist && tsc -w --outDir ./dist",
-    "prepare": "rm -rf dist && tsc --outDir ./dist"
+    "prepare": "yarn tsc-lint && rm -rf dist && tsc --outDir ./dist",
+    "publish": "yarn prepare && npm publish"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
