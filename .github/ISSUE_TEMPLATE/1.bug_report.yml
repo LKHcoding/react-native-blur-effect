@@ -1,0 +1,91 @@
+name: Bug Report
+description: Create a bug report for react-native-blur-effect.
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is to report bugs for the react-native-blur-effect library. Please describe the issue with as much detail as possible and provide a link to a minimal reproduction using a public GitHub repository or a snack on https://snack.expo.dev/.
+
+        Before opening a new issue, please do a [search](https://github.com/LKHcoding/react-native-blur-effect/issues) of existing issues to avoid duplicates. Help us help you faster by upvoting existing issues.
+
+        If you need help with your React Native project, consider:
+        - Starting a discussion on the [repository's discussions board](https://github.com/LKHcoding/react-native-blur-effect/discussions)
+        - Asking a question in the React Native community forums or Discord servers
+
+        **Installation**:
+        - Ensure `react-native-webview` is also installed as it is a dependency.
+        - Install command: `yarn add react-native-webview react-native-blur-effect`
+
+        **Usage**:
+        - For detailed usage and code examples, please refer to the [README file](https://github.com/LKHcoding/react-native-blur-effect#usage) of this repository.
+
+        **Precautions**:
+        - `BlurView` utilizes `WebView` from `react-native-webview`.
+        - Past issues with `WebView` crashing within `ScrollView` have been resolved as of `react-native-webview` version ^13.6.2.
+
+  - type: input
+    attributes:
+      label: Link to the code that reproduces this issue
+      description: |
+        Provide a link to a **public** GitHub repository or a snack that minimally reproduces the issue. Ensure your reproduction is based on the simplest possible setup that demonstrates the bug.
+      placeholder: 'https://github.com/user/my-minimal-rn-blur-effect-reproduction'
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: To Reproduce
+      description: A step-by-step description of how to reproduce the issue, based on the linked reproduction.
+      placeholder: |
+        1. Install the library
+        2. Apply blur effect on Component X
+        3. Unexpected behavior/visual occurs
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Current vs. Expected behavior
+      description: A clear and concise description of what the bug is, and what you expected to happen.
+      placeholder: 'Following the steps from the previous section, I expected A to happen, but I observed B instead'
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Provide environment information
+      description: Please run `yarn react-native info` in your project's root directory and paste the results here.
+      render: bash
+      placeholder: |
+        System:
+          iOS: iOS 14.4
+          Android: Android 11 (API 30)
+          Processor: arm64
+        Environment:
+          Node: 16.17.1
+          npm: 8.19.3
+          Yarn: 1.22.19
+          React: 17.0.2
+          React Native: 0.66.4
+          react-native-webview: 13.6.2
+          react-native-blur-effect: 1.1.3
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Which OS(s) are affected? (Select all that apply)
+      multiple: true
+      options:
+        - 'iOS'
+        - 'AOS'
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Any extra information that might help us investigate, such as specific device details, operating systems, or if the issue occurs under certain conditions.
+      placeholder: |
+        The issue occurs only on Android devices with API level 30. I tested the same setup on iOS and did not encounter the issue.
